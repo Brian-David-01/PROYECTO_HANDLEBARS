@@ -1,0 +1,107 @@
+<div class="px-4 sm:px-6 lg:px-8 mt-20 mb-10" data-aos="fade-up"
+     data-aos-duration="1000">
+  <div class="sm:flex sm:items-center">
+    <div class="sm:flex-auto text-center">
+      <h1 class="text-3xl font-bold leading-6 text-sky-600 uppercase">Celulares</h1>
+      <p class="mt-2 text-sm text-gray-700">Lista de todos los celulares agregados</p>
+    </div>
+  </div>
+  <div class="mt-8 flow-root">
+    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+        <table class="min-w-full divide-y divide-gray-300 text-center">
+          <thead>
+            <tr>
+              <th scope="col" class="py-3.5 pl-4 pr-3 text-center text-sm font-semibold text-gray-900 sm:pl-0">Num.</th>
+              <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">Clave</th>
+              <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">Marca</th>
+              <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">Precio</th>
+              <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">Fecha Lanzamiento</th>
+              <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">RAM</th>
+              <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">Almacenamiento</th>
+              <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">Cantidad de Camaras</th>
+              <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">Acciones</th>
+              {{!-- <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-0">
+                <span class="sr-only">Edit</span>
+              </th> --}}
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 bg-white">
+            {{#each celulares}}
+            <tr>
+              <td class=" text-sm sm:pl-0">
+                <div class="flex items-center">
+                  <div class="">
+                    {{@index}}
+                    {{!-- <div class="font-medium text-gray-900">Lindsay Walton</div>
+                    <div class="text-gray-500">lindsay.walton@example.com</div> --}}
+                  </div>
+                </div>
+              </td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                {{clave}}
+                {{!-- <div class="text-gray-900">Front-end Developer</div>
+                <div class="text-gray-500">Optimization</div> --}}
+              </td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{marca}}</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{precio}}</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{fechaLanzamiento}}</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ram}}</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{almacenamiento}}</td>
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{cantCamaras}}</td>
+              
+                        <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                            <a href="/celulares/{{_id}}/update" class="inline-flex items-center rounded-md border border-transparent bg-amber-600 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2">Actualizar</a>
+                        </td>
+                        <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                            <a href="/celulares/{{_id}}/delete" class="inline-flex items-center rounded-md border border-transparent bg-red-600 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">Eliminar</a>
+                        </td>
+                        </tr>
+                    {{/each}}
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{!-- <table>
+    <thead>
+        <tr>
+            <th>Num.</th>
+            <th>Nombre</th>
+            <th>Paterno</th>
+            <th>Materno</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Sexo</th>
+            <th>Celular</th>
+            <th>Dirección</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each alumnos}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{nombre}}</td>
+                <td>{{paterno}}</td>
+                <td>{{materno}}</td>
+                <td>{{fechaNac}}</td>
+                <td>{{sexo}}</td>
+                <td>{{celular}}</td>
+                <td>{{direccion}}</td>
+                <td>
+                    {{#if opcion}}
+                        <a href="/alumnos/{{_id}}/status">Dado de baja</a>
+                    {{else}}
+                        <a href="/alumnos/{{_id}}/status">Dado de alta</a>
+                    {{/if}}
+                    <a href="/alumnos/{{_id}}/update">Actualizar</a>
+                    <a href="/alumnos/{{_id}}/delete">Eliminar</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table> --}}
